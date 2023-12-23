@@ -8,12 +8,12 @@ H = zeros(1, 6);
 Ma = zeros(1, 200);
 D = zeros(6, 200);
 
-for j = 1000:1000:6000
+for j = 1:6
 
     for i = 1:200
         V(i) = i;
-        H(j / 1000) = j;
-        [rho, Ma(i)] = UAV_density(H(j / 1000), V(i));
+        H(j) = j * 1000;
+        [rho, Ma(i)] = UAV_density(H(j), V(i));
         C_L = 2 * W / (rho * V(i) ^ 2 * S);
 
         for alpha_deg = -4:0.0001:20
@@ -26,7 +26,7 @@ for j = 1000:1000:6000
         end
 
         C_D = interp1d(TBL_C_D, IDX_alpha_deg, alpha_deg);
-        D(j / 1000, i) = C_D * rho * V(i) ^ 2 * S / 2;
+        D(j, i) = C_D * rho * V(i) ^ 2 * S / 2;
     end
 
 end
