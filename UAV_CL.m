@@ -3,9 +3,6 @@ function [CL0, CL_ele] = UAV_CL(alpha_deg)
 
     IDX_alpha = [-4; -2; 0; 2; 4; 8; 12; 16; 20];
     TBL_CL0 = [-0.219; -0.04; 0.139; 0.299; 0.455; 0.766; 1.083; 1.409; 1.743];
-    % rad2deg = 180 / pi;
-    % alpha_deg = alpha * rad2deg;
     CL0 = interp1d(TBL_CL0, IDX_alpha, alpha_deg);
     CL_ele = 0.00636;
-
 end

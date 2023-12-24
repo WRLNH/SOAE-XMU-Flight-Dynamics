@@ -87,14 +87,13 @@ Myblate = [0, Ybar(5);
            Nbar(4), Nbar(5);
            0, 0];
 
-
 CMele_over_CMalpha = CM_ele / CM0;
 
-CNrud_over_CNbeta = -0.00111 / 0.00235;
+CNrud_over_CNbeta = -0.00111/0.00235;
 
-omega_nsp = sqrt(-(Mbar_alpha + Mbar_q * Za));
-xi_sp = -(Mbar_q + Mbar_dalpha - Za) / (2 * omega_nsp);
+omega_nsp = sqrt(- (Mbar_alpha + Mbar_q * Za));
+xi_sp =- (Mbar_q + Mbar_dalpha - Za) / (2 * omega_nsp);
 omega_np = sqrt(2) * g / V;
 xi_p = 1 / (sqrt(2) * (CL0 / CD0));
 omega_ndr = sqrt(Nbar(1) - Nbar(1) * Ybar(3) + Nbar(3) * Ybar(1));
-xi_dr = - (Nbar(3) + Ybar(1)) / (2 * omega_ndr);
+xi_dr =- (Nbar(3) + Ybar(1)) / (2 * omega_ndr);
